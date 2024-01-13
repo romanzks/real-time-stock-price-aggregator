@@ -2,21 +2,54 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        DB::table('companies')->insert([
+            [
+                'name' => 'Apple',
+                'symbol' => 'AAPL',
+            ],
+            [
+                'name' => 'Microsoft',
+                'symbol' => 'MSFT',
+            ],
+            [
+                'name' => 'Saudi Aramco',
+                'symbol' => '2222.SR',
+            ],
+            [
+                'name' => 'Alphabet (Google)',
+                'symbol' => 'GOOG',
+            ],
+            [
+                'name' => 'Amazon',
+                'symbol' => 'AMZN',
+            ],
+            [
+                'name' => 'NVIDIA',
+                'symbol' => 'NVDA',
+            ],
+            [
+                'name' => 'Meta Platforms (Facebook)',
+                'symbol' => 'META',
+            ],
+            [
+                'name' => 'Berkshire Hathaway',
+                'symbol' => 'BRK-B',
+            ],
+            [
+                'name' => 'Tesla',
+                'symbol' => 'TSLA',
+            ],
+            [
+                'name' => 'Eli Lilly',
+                'symbol' => 'LLY',
+            ],
+        ]);
     }
 }
